@@ -1,0 +1,57 @@
+using System;
+
+namespace ConsoleApp26
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            char input1 = char.Parse("n");
+            string value1 = SwitchChar(input1);
+
+            char input2 = char.Parse("c");
+            string value2 = SwitchChar(input2);
+
+            Console.WriteLine(value1);
+            Console.WriteLine(value2);
+            Console.WriteLine(SwitchChar('t'));
+        }
+        static string SwitchChar(char input)
+        {
+            switch (input)
+            {
+                case 'a':
+                    {
+                        return "Area";
+                    }
+                case 'b':
+                    {
+                        return "Box";
+                    }
+                case 'c':
+                    {
+                        return "vs";
+                    }
+                case 'N':
+                case 'n':
+                    {
+                        return "Navaradnarajah";
+                    }
+                case 'T':
+                case 't':
+                    {
+                        return "Thanalechsumy";
+                    }
+                case 'U':
+                case 'u':
+                    {
+                        return "Under";
+                    }
+                default:
+                    {
+                        return "Deal";
+                    }
+            }
+        }
+    }
+}
