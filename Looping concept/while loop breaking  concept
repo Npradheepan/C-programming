@@ -1,0 +1,27 @@
+using System;
+
+class Program
+{
+    static void Main(string[]args)
+    {
+        int index = 0;
+      
+        while (true)
+        {
+            int value = ++index;
+            
+            if (value > 3)
+            {
+                Console.WriteLine("while loop break statement..");
+                break;
+            }
+           
+            if (value > 100)
+            {
+                throw new Exception("Never hit because break over 3");
+            }
+            
+            Console.WriteLine("While-loop hit still break statement");
+        }
+    }
+}
