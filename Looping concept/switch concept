@@ -1,0 +1,42 @@
+using System;
+
+namespace ConsoleApp24
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the unter Five  valiue  of  Number!");
+            try
+            {
+                int i = int .Parse(Console.ReadLine());
+                switch (i)
+                {
+                    case 0:
+                    case 1 :
+                    case 2 :
+                        {
+                            Console.WriteLine("The First Number of Value");
+                            break;
+                        }
+                    case 3:
+                    case 4:
+                    case 5:
+                        {
+                            Console.WriteLine("The Second Number of Value");
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Other Number not sutable");
+                            break;
+                        }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+    }
+}
