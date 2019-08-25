@@ -1,0 +1,20 @@
+using System;
+
+namespace ConsoleApp37
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int value = 4;
+            int i;
+           
+            while ((i = value) >= 0)
+            {
+               
+                Console.WriteLine("While {0} {1}", i, value);
+                value--;
+            }
+        }
+    }
+}
