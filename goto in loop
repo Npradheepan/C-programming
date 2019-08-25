@@ -1,0 +1,21 @@
+using System;
+
+namespace ConsoleApp39
+{
+    class Program
+    {
+        static void Main(string[] args)
+        { 
+            for(int i = 1; i< 10; i++)
+            {
+            if ( i == 5)
+                {
+                    goto endloop;
+                }
+            Console.WriteLine(" Ivalue Count: {0}",i);
+            }
+         endloop: Console.WriteLine("The End of  loop");
+         Console.ReadKey();
+        }
+    }
+}
