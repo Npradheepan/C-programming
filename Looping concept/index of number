@@ -1,0 +1,25 @@
+using System;
+
+namespace ConsoleApp29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int Limit(int Max, int[] Array)
+            {
+                return Math.Min(Max, Array.Length);
+            }
+            int[] values = { 10, 20, 30, 40, 50 };
+            for(int i = 0; i  < Limit(2, values); i++)
+            {
+                Console.WriteLine("Limit two intex : " +values[i]);
+            }
+            for (int i = 0; i < Limit(10, values); i++)
+            {
+                Console.WriteLine("Limit 10 intex : " + values[i]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
