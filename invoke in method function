@@ -1,0 +1,18 @@
+using System;
+
+namespace ConsoleApp43
+{
+    class Program
+    {
+        public static void GetUserDetails()
+        {
+            string name = "Pradheepan";
+            int age = 40;
+            Console.WriteLine("Name : {0},Age : {1}", name, age);
+        }
+        static void Main(string[] args)
+        {
+            GetUserDetails();
+        }
+    }
+}
