@@ -1,0 +1,19 @@
+using System;
+
+namespace ConsoleApp41
+{
+    class Program
+    {
+        public string show(string message)
+        {
+            Console.WriteLine("Inside Show Function");
+            return message;
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            string message = program.show("pradheepan");
+            Console.WriteLine("Hallo"+" "+message);
+        }
+    }
+}
