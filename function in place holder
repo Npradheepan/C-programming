@@ -1,0 +1,19 @@
+using System;
+
+namespace ConsoleApp42
+{
+    class Program
+    {
+        public string GetuserDetails(string name,int age)
+        {
+            string info = string.Format("Name: {0}, Age : {1}", name, age);
+            return info;
+        }
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            string result = p.GetuserDetails("pradheepan", 40);
+            Console.WriteLine(result );
+        }
+    }
+}
