@@ -1,0 +1,21 @@
+using System;
+
+namespace ConsoleApp46
+{
+    class Program
+    {
+        public void show(ref int val)
+        {
+            val *= val;
+            Console.WriteLine("value the show function" + val);
+        }
+        static void Main(string[] args)
+        {
+            int val = 5;
+            Program program = new Program();
+            Console.WriteLine("Value before the  The function" +val);
+            program.show(ref val);
+            Console.WriteLine("Value after the function" + val);
+        }
+    }
+}
