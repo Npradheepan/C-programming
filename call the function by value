@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp45
+{
+    class Program
+    {
+        public void show(int val)
+        {
+            val *= val;
+            Console.WriteLine("Value in site show Function" + val);
+         }
+
+        static void Main(string[] args)
+        {
+            int val = 5;
+            Program program = new Program();
+            Console.WriteLine("Value before the  function is:" + val);
+            program.show(val);
+            Console.WriteLine(" Value after the function is :" +val);
+        }
+    }
+}
