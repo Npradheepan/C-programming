@@ -1,0 +1,26 @@
+using System;
+
+namespace ConsoleApp48
+{
+    class Program
+    {
+        public void show(out int a,out int b)
+        {
+            int square = 5;
+            a = square;
+            b = square;
+            a *= a;
+            b *= b;
+        }
+
+        static void Main(string[] args)
+        {
+            int val1 = 50, val2 = 100;
+            Program program = new Program();
+            Console.WriteLine("Value before thepassing \n value1 :" + val1+"\nvalue2 :"+val2);
+            program.show(out val1, out val2);
+            Console.WriteLine("value after the function \n value :"+val1+"\n value2 : "+val2 );
+
+        }
+    }
+}
