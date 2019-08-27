@@ -1,0 +1,22 @@
+using System;
+
+namespace ConsoleApp47
+{
+    class Program
+    {
+        public void show(out int val)
+        {
+            int square = 5;// here multifle 5*5  für after
+            val = square;
+            val *= val;
+        }
+        static void Main(string[] args)
+        {
+            int val = 20;
+            Program program = new Program();
+            Console.WriteLine("before the function value is "+ val);
+            program.show(out val);
+            Console.WriteLine("after the function value is :" + val);
+        }
+    }
+}
