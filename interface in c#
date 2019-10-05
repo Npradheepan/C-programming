@@ -1,0 +1,26 @@
+ using System;
+//keine  interface field
+// interface keine Modyfier
+// default private modyfier
+// keine Implementierung
+// hie nur Erklärung
+interface ICustomer
+{
+    void Print();
+}
+class Customer : ICustomer
+{
+    public  void Print( )
+    {
+        Console.WriteLine ("Interface Print Method");
+    }
+}
+     class Program
+    {
+        static void Main(string[] args)
+        {
+        Customer custom = new Customer();
+        custom.Print();
+        }
+    }
+
