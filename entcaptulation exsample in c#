@@ -1,0 +1,36 @@
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer C1 = new Customer();
+            C1.NachName = "Navaradnarajah";
+            C1.VorName = "Pradheepan";
+            Console.WriteLine(C1.GetFullName());
+        }
+    }
+    class Customer
+    {
+        private string _NachName;
+        private string _VorName;
+
+        public string NachName
+        {
+            get { return _NachName; }
+            set { _NachName = value; }
+        }
+        public string VorName
+        {
+            get { return _VorName; }
+            set { _VorName = value; }
+        }
+        public string GetFullName ()
+        {
+            return _NachName + ","+_VorName;
+        }
+    }
+}
+
