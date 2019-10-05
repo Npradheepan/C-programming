@@ -1,0 +1,31 @@
+
+using System;
+abstract class abstraktClass
+{
+    abstract public int AbstrktMethod();
+}
+
+class Number : abstraktClass
+{
+    int number = 0;
+
+    public Number(int n)
+    {
+        number = n;
+    }
+    public override int AbstrktMethod()
+    {
+        return number* number;
+    }
+}
+
+class program
+{
+
+    // Main Method 
+    public static void Main()
+    {
+        Number s = new Number(5);
+        Console.WriteLine("Sum  = " + s.AbstrktMethod());
+    }
+}
