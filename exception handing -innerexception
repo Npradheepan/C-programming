@@ -1,0 +1,18 @@
+using System;
+using System.IO;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string FilePath = @"C:\Users\pradheepan\Desktop\sample\text.txt";          
+            StreamReader sr = new StreamReader(FilePath);
+            sr.write(ex.GetType().Nmae);
+            sr.write(Exception.message);
+            sr.Close();
+            Console.WriteLine("Exception throw Message here can write, what you needs"); 
+        }
+    }
+}
