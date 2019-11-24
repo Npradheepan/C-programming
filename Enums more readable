@@ -1,0 +1,57 @@
+using System;
+
+namespace ConsoleApp21
+{
+    public class Enums
+    {
+        static void Main(string[] args)
+        {
+            Custommer[] custommers = new Custommer[3];
+            custommers[0] = new Custommer
+            {
+                Name = "Raju",
+                Gender = Gender.Male
+            };
+            custommers[1] = new Custommer
+            {
+                Name = "Roja",
+                Gender = Gender.Female
+            };
+            custommers[2] = new Custommer
+            {
+                Name = "Muththu",
+                Gender = Gender.Unkown
+            };
+
+            foreach (Custommer custom in custommers)
+            {
+                Console.WriteLine("Name {0},Genter {1}", custom.Name, GetGender(custom.Gender));
+            }
+        }
+        public static string GetGender (Gender gender)
+        {
+            switch (gender)
+            {
+                case Gender.Unkown:
+                    return "unkonw";
+                case Gender.Male:
+                    return "Male";
+                case Gender.Female:
+                    return "Female";
+                default:
+                    return "No More options";
+            }
+        }
+    }
+    public enum Gender
+    {
+        Unkown,
+        Male,
+        Female
+    }
+    public class Custommer
+    {
+        public string Name { get; set; }
+        public  Gender Gender{ get; set; }
+    }
+}
