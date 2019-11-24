@@ -1,0 +1,15 @@
+using System;
+using System.IO;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            StreamReader streamReader = new StreamReader( "C:\\Users\\pradheepan\\Desktop\\sample");
+            Console.WriteLine(streamReader.ReadToEnd());
+            streamReader.Close();
+        }
+    }
+}
