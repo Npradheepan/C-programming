@@ -16,3 +16,21 @@ namespace ConsoleApp4
         }
     }
 }
+*******************************************************************************************************************************************
+
+using System;
+using System.IO;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             
+            StreamReader StreamReader = new StreamReader(@"C:\Users\pradheepan\Desktop\sample\text.txt");
+            Console.WriteLine(StreamReader.ReadToEnd());
+            StreamReader.Close();
+        }
+    }
+}
