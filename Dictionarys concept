@@ -1,0 +1,727 @@
+1)
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            Customer customer103 = disctionarycustomer[103];
+            Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customer103.ID, customer103.Name, customer103.Salary);
+        }
+    }
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+2)
+// Take the input Id Value  
+_____________________________________________________________________________________________________________________________
+
+using System;
+using System.Collections.Generic;
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+            
+            Customer customer103 = disctionarycustomer[103];
+            Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customer103.ID, customer103.Name, customer103.Salary);
+           
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+--------------------------------------------------------------------------------------------------------------------------------------
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+            
+            Console.WriteLine("ID Values :\n101,\n102,\n103,");
+            Console.WriteLine("Trägen Sie customer ID");
+            int num = Convert.ToInt16(Console.ReadLine());
+            Customer customer103 = disctionarycustomer[num];
+            Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customer103.ID, customer103.Name, customer103.Salary);
+        }
+    }
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+3)// foreach Loop 
+------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            //Console.WriteLine("ID Values :\n101,\n102,\n103,");
+            //Console.WriteLine("Trägen Sie customer ID");
+            //int num = Convert.ToInt16(Console.ReadLine());
+            //Customer customer103 = disctionarycustomer[num];
+            Customer customer103 = disctionarycustomer[103];
+            //Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customer103.ID, customer103.Name, customer103.Salary);
+            foreach(KeyValuePair<int,Customer> cutomervaluepair in disctionarycustomer)
+            {
+                Console.WriteLine("key = {0}", cutomervaluepair.Key);
+                Customer custom = cutomervaluepair.Value;
+                Console.WriteLine("ID = {0}, Name ={1},Salary = {2}", custom.ID, custom.Name, custom.Name);
+                Console.WriteLine("------------------------------------------------------------------------------------------");
+            }
+        }
+    }
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+4)//key value only
+--------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            //Console.WriteLine("ID Values :\n101,\n102,\n103,");
+            //Console.WriteLine("Trägen Sie customer ID");
+            //int num = Convert.ToInt16(Console.ReadLine());
+            //Customer customer103 = disctionarycustomer[num];
+            Customer customer103 = disctionarycustomer[103];
+            //Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customer103.ID, customer103.Name, customer103.Salary);
+            foreach(KeyValuePair<int,Customer> cutomervaluepair in disctionarycustomer)
+            {
+                Console.WriteLine("key = {0}", cutomervaluepair.Key);
+                
+
+                //Console.WriteLine("key = {0}", cutomervaluepair.Key);
+                //Console.WriteLine("Wählen Sie welche Key!");
+
+                //Customer custom = cutomervaluepair.Value;
+                //Console.WriteLine("ID = {0}, Name ={1},Salary = {2}", custom.ID, custom.Name, custom.Name);
+                //Console.WriteLine("------------------------------------------------------------------------------------------");
+            }
+        }
+    }
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------------
+5)
+//string  format select in string 
+
+---------------
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<string, Customer> disctionarycustomer = new Dictionary<string, Customer>();
+            disctionarycustomer.Add(customer1.Name, customer1);
+            disctionarycustomer.Add(customer2.Name, customer2);
+            disctionarycustomer.Add(customer3.Name, customer3);
+
+            Console.WriteLine("Name Values :\nMaki,\nKumar,\nRosi,");
+            Console.WriteLine("Trägen Sie customer ID");
+            string num =  Console.ReadLine();
+            Customer customerMaki = disctionarycustomer[num];
+            //Customer customer103 = disctionarycustomer[];
+            Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customerMaki.ID, customerMaki.Name, customerMaki.Salary);
+            //foreach(KeyValuePair<int,Customer> cutomervaluepair in disctionarycustomer)
+            //{
+            //    Console.WriteLine("key = {0}", cutomervaluepair.Key);
+
+
+            //Console.WriteLine("key = {0}", cutomervaluepair.Key);
+            //Console.WriteLine("Wählen Sie welche Key!");
+
+            //Customer custom = cutomervaluepair.Value;
+            //Console.WriteLine("ID = {0}, Name ={1},Salary = {2}", custom.ID, custom.Name, custom.Name);
+            //Console.WriteLine("------------------------------------------------------------------------------------------");
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+6)
+Exception handling
+
+
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            Console.WriteLine("ID Values :\n101,\n102,\n103,");
+            Console.WriteLine("Trägen Sie customer ID");
+            int num = Convert.ToInt16(Console.ReadLine());
+
+            Customer custom;
+            //if (disctionarycustomer.TryGetValue(102, out custom))
+                if (disctionarycustomer.TryGetValue(num, out custom))
+                {
+                    Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", custom.ID, custom.Name, custom.Salary);
+                }
+               else
+                {
+                    Console.WriteLine("Der Key ist Not found");
+                }
+           
+           
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+7) count concept
+-----------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 4500,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 4500,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            //Console.WriteLine("ID Values :\n101,\n102,\n103,");
+            //Console.WriteLine("Trägen Sie customer ID");
+            //int num = Convert.ToInt16(Console.ReadLine());
+
+            //Customer custom;
+            //if (disctionarycustomer.TryGetValue(102, out custom))
+            ////if (disctionarycustomer.TryGetValue(num, out custom))
+            //{
+            //        Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", custom.ID, custom.Name, custom.Salary);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Der Key ist Not found");
+            //}
+            Console.WriteLine("Tatal count Iterm: {0}", disctionarycustomer.Count);
+           
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+8)// cound function
+// Namespace SYstem Linq
+-----------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            //Console.WriteLine("ID Values :\n101,\n102,\n103,");
+            //Console.WriteLine("Trägen Sie customer ID");
+            //int num = Convert.ToInt16(Console.ReadLine());
+
+            //Customer custom;
+            //if (disctionarycustomer.TryGetValue(102, out custom))
+            ////if (disctionarycustomer.TryGetValue(num, out custom))
+            //{
+            //        Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", custom.ID, custom.Name, custom.Salary);
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Der Key ist Not found");
+            //}
+            Console.WriteLine("Tatal count Iterm: {0}", disctionarycustomer.Count( kvp => kvp.Value.Salary>= 4000));
+           
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+9)// remove function
+----------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            // in the value  in ID
+            disctionarycustomer.Remove(102);
+
+
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+10) // clear fuction
+-------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            disctionarycustomer.Clear();
+
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+11) 
+// Dictionary Array
+-----------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Dictionary<int, Customer> disctionarycustomer = new Dictionary<int, Customer>();
+            disctionarycustomer.Add(customer1.ID, customer1);
+            disctionarycustomer.Add(customer2.ID, customer2);
+            disctionarycustomer.Add(customer3.ID, customer3);
+
+            Customer[] customers = new Customer[3];
+            customers[0] = customer1;
+            customers[1] = customer2;
+            customers[2] = customer3;
+            Dictionary <int,Customer> dict = customers.ToDictionary(cust => cust.ID, cust => cust );
+            foreach (KeyValuePair<int,Customer>kvp in dict)
+            {
+                Console.WriteLine("Key : {0}",kvp.Key);
+                Customer cust = kvp.Value;
+                Console.WriteLine("ID = {0} Name : {1} Salary : {2}",cust.ID,cust.Name,cust.Salary);
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+12)
+//List  in Dictionary
+-------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            Dictionary <int,Customer> dict = customers.ToDictionary(cust => cust.ID, cust => cust );
+            foreach (KeyValuePair<int,Customer>kvp in dict)
+            {
+                Console.WriteLine("Key : {0}",kvp.Key);
+                Customer cust = kvp.Value;
+                Console.WriteLine("ID = {0} Name : {1} Salary : {2}",cust.ID,cust.Name,cust.Salary);
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+
+
