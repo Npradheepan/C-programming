@@ -1,0 +1,733 @@
+1)
+// Array 
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+             Customer[] customers = new Customer[3];
+            customers[0] = customer1;
+            customers[1] = customer2;
+            customers[2] = customer3;
+
+            Dictionary <int,Customer> dict = customers.ToDictionary(cust => cust.ID, cust => cust );
+            foreach (KeyValuePair<int,Customer>kvp in dict)
+            {
+                Console.WriteLine("Key : {0}",kvp.Key);
+                Customer cust = kvp.Value;
+                Console.WriteLine("ID = {0} Name : {1} Salary : {2}",cust.ID,cust.Name,cust.Salary);
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+----------------------------------------------------------------------------------------------------------------------
+2)
+
+//list
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            Dictionary <int,Customer> dict = customers.ToDictionary(cust => cust.ID, cust => cust );
+            foreach (KeyValuePair<int,Customer>kvp in dict)
+            {
+                Console.WriteLine("Key : {0}",kvp.Key);
+                Customer cust = kvp.Value;
+                Console.WriteLine("ID = {0} Name : {1} Salary : {2}",cust.ID,cust.Name,cust.Salary);
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+--------------------------------------------------------------------------------------------------------------------------------
+3)
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            Customer cus = customers[0];
+
+            Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", cus.ID, cus.Name, cus.Salary);
+
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+-----------------------------------------------------------------------------------------------------------------------------------
+4)
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            
+            foreach (Customer cus in customers)
+            {
+                Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", cus.ID, cus.Name, cus.Salary);
+                Console.WriteLine("-------------------------------------------------");
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+5)
+----------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            
+            for (int i = 0; i < customers.Count; i ++)
+            {
+                Customer cus = customers[i];
+                Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", cus.ID, cus.Name, cus.Salary);
+                Console.WriteLine("-------------------------------------------------");
+            }
+        }
+    }
+    
+    
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+6)
+-------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+            customers.Insert(0, customer3);
+
+            
+            for (int i = 0; i < customers.Count; i ++)
+            {
+                Customer cus = customers[i];
+                Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", cus.ID, cus.Name, cus.Salary);
+                Console.WriteLine("-------------------------------------------------");
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+7)
+// indexOf
+-------------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+            customers.Insert(0, customer3);
+
+            Console.WriteLine( customers.IndexOf(customer3));
+
+            
+            for (int i = 0; i < customers.Count; i ++)
+            {
+                Customer cus = customers[i];
+                Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", cus.ID, cus.Name, cus.Salary);
+                Console.WriteLine("-------------------------------------------------");
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+
+8)
+//Contain this later
+-----------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+            customers.Insert(0, customer3);
+
+            Console.WriteLine( customers.IndexOf(customer3));
+
+            
+            for (int i = 0; i < customers.Count; i ++)
+            {
+                Customer cus = customers[i];
+                Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", cus.ID, cus.Name, cus.Salary);
+                Console.WriteLine("-------------------------------------------------");
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+9) // lambda Expresion
+// Existen
+-----------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            if (customers.Exists(cus =>cus.Name.StartsWith("R")))
+            {
+                Console.WriteLine("Existe in this list");
+            }
+            else
+            {
+                Console.WriteLine("Not found this list");
+            }
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+10)
+// find 
+---------------------------------------------------------------------------------------------------------------------------
+
+
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            Customer custom = customers.Find(cus => cus.Salary > 3000);
+            Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", custom.ID, custom.Name, custom.Salary);
+
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+11)
+//FindLast
+----------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+            Customer custom = customers.FindLast(cus => cus.Salary > 3000);
+            Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", custom.ID, custom.Name, custom.Salary);
+
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+12)
+// find All
+--------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add ( customer1);
+            customers.Add (customer2);
+            customers.Add (customer3);
+
+           List< Customer> custom = customers.FindAll(cus => cus.Salary > 3000);
+            foreach ( Customer c in custom)
+            {
+                Console.WriteLine("ID :{0}, Name :{1},Salary :{2}", c.ID, c.Name, c.Salary);
+            }
+           
+
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+13)
+ // Findindexer
+ ----------------------------------------------------------------------------------------------------------------------------------
+ using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3= new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+             
+
+            List<Customer> listcustomers = new List<Customer>();
+            listcustomers.Add ( customer1);
+            listcustomers.Add (customer2);
+            listcustomers.Add (customer3);
+
+           int index = listcustomers.FindIndex(cus => cus.Salary > 3000);
+            Console.WriteLine(index); 
+
+        }
+    }
+
+    public class  Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
