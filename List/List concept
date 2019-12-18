@@ -1229,3 +1229,447 @@ namespace System.Linq
 
 }
 
+// Sort a list of complex types using Comparison delegate
+------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>();
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            Comparison<Customer> CustomerCompare = new Comparison<Customer>(Comparecustomer);
+
+            Console.WriteLine("Before the list Sorting!");
+            foreach (Customer ccompare in customerslist)
+            {
+                Console.WriteLine(ccompare.ID);
+            }
+
+            Console.WriteLine("After  the list Sorting!");
+            customerslist.Sort(CustomerCompare);
+            foreach(Customer ccompare in customerslist)
+            {
+                Console.WriteLine(ccompare.ID);
+            }
+        }
+        public static int Comparecustomer(Customer x, Customer y)
+        {
+            return x.ID.CompareTo(y.ID);
+        }
+
+
+
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+
+//
+-------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>();
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            
+
+            Console.WriteLine("Before the list Sorting!");
+            foreach (Customer ccompare in customerslist)
+            {
+                Console.WriteLine(ccompare.ID);
+            }
+
+            Console.WriteLine("After  the list Sorting!");
+            customerslist.Sort( delegate(Customer x , Customer y){ return x.ID.CompareTo(y.ID); });
+            foreach(Customer ccompare in customerslist)
+            {
+                Console.WriteLine(ccompare.ID);
+            }
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+//lambda expresion
+------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>();
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            
+
+            Console.WriteLine("Before the list Sorting!");
+            foreach (Customer ccompare in customerslist)
+            {
+                Console.WriteLine(ccompare.ID);
+            }
+
+            Console.WriteLine("After  the list Sorting!");
+            customerslist.Sort( (x,y)=>x.ID.CompareTo(y.ID));
+            foreach(Customer ccompare in customerslist)
+            {
+                Console.WriteLine(ccompare.ID);
+            }
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+
+// True  for All 
+-------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>();
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            Console.WriteLine("All Salary greater than 3000" + " "+customerslist.TrueForAll(x => x.Salary > 4000));
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+///
+---------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>();
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            Console.WriteLine("All Salary greater than 3000" + " "+customerslist.TrueForAll(x => x.Salary > 4000));
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+//AsReadOnly
+---------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Collections.ObjectModel; 
+
+namespace  console
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>();
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            ReadOnlyCollection<Customer>readonlycustomers=  customerslist.AsReadOnly();
+            Console.WriteLine("read only customer Elements = " +" "+ readonlycustomers.Count);
+            
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+// capacity
+--------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Collections.ObjectModel; 
+
+namespace  console
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>(100);
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            Console.WriteLine("customent capcity = " + ""+ customerslist.Capacity);
+            
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
+// trimExcess
+------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Collections.ObjectModel; 
+
+namespace  console
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 109,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+
+
+            List<Customer> customerslist = new List<Customer>(100);
+            customerslist.Add(customer1);
+            customerslist.Add(customer2);
+            customerslist.Add(customer3);
+
+            Console.WriteLine("customer Beofre capcity  of= " + ""+ customerslist.Capacity);
+            customerslist.TrimExcess();
+            Console.WriteLine("customer After capcity of = " + "" + customerslist.Capacity);
+
+        }
+    }
+
+    public class Customer 
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+
+}
