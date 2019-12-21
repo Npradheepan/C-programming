@@ -1,0 +1,595 @@
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Queue<Customer> Queuecustomers = new Queue<Customer>();
+            Queuecustomers.Enqueue(customer1);
+            Queuecustomers.Enqueue(customer2);
+            Queuecustomers.Enqueue(customer3);
+            Queuecustomers.Enqueue(customer4);
+            Queuecustomers.Enqueue(customer5);
+
+            Customer cus1 =  Queuecustomers.Dequeue();
+            Console.WriteLine(cus1.ID + " " + cus1.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            Customer cus2 = Queuecustomers.Dequeue();
+            Console.WriteLine(cus2.ID + " " + cus2.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            Customer cus3 = Queuecustomers.Dequeue();
+            Console.WriteLine(cus3.ID + " " + cus3.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            Customer cus4 = Queuecustomers.Dequeue();
+            Console.WriteLine(cus4.ID + " " + cus4.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            Customer cus5 = Queuecustomers.Dequeue();
+            Console.WriteLine(cus5.ID + " " + cus5.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+2)
+---------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Queue<Customer> Queuecustomers = new Queue<Customer>();
+            Queuecustomers.Enqueue(customer1);
+            Queuecustomers.Enqueue(customer2);
+            Queuecustomers.Enqueue(customer3);
+            Queuecustomers.Enqueue(customer4);
+            Queuecustomers.Enqueue(customer5);
+
+           
+
+             foreach (Customer custo  in Queuecustomers)
+            {
+                Console.WriteLine(custo.ID + " " + custo.Name);
+                Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+            }
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+3)
+-------------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Queue<Customer> Queuecustomers = new Queue<Customer>();
+            Queuecustomers.Enqueue(customer1);
+            Queuecustomers.Enqueue(customer2);
+            Queuecustomers.Enqueue(customer3);
+            Queuecustomers.Enqueue(customer4);
+            Queuecustomers.Enqueue(customer5);
+
+            //Customer cus1 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus1.ID + " " + cus1.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus2 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus2.ID + " " + cus2.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus3 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus3.ID + " " + cus3.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus4 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus4.ID + " " + cus4.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus5 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus5.ID + " " + cus5.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+
+            foreach (Customer custo  in Queuecustomers)
+            {
+                Console.WriteLine(custo.ID + " " + custo.Name);
+                Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+            }
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+4)
+_-------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Queue<Customer> Queuecustomers = new Queue<Customer>();
+            Queuecustomers.Enqueue(customer1);
+            Queuecustomers.Enqueue(customer2);
+            Queuecustomers.Enqueue(customer3);
+            Queuecustomers.Enqueue(customer4);
+            Queuecustomers.Enqueue(customer5);
+
+            // without Removing the Element Value in peek que method
+             Customer cus1 = Queuecustomers.Peek();
+            Console.WriteLine(cus1.ID + " " + cus1.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus1 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus1.ID + " " + cus1.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus2 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus2.ID + " " + cus2.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus3 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus3.ID + " " + cus3.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus4 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus4.ID + " " + cus4.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+            //Customer cus5 = Queuecustomers.Dequeue();
+            //Console.WriteLine(cus5.ID + " " + cus5.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+
+
+            //foreach (Customer custo  in Queuecustomers)
+            //{
+            //    Console.WriteLine(custo.ID + " " + custo.Name);
+            //    Console.WriteLine("Total Iterm in the Queue=" + Queuecustomers.Count);
+            //}
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}   
+
+5)// stack methode
+----------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Stack<Customer> stackcustomers = new Stack<Customer>();
+            stackcustomers.Push(customer1);
+            stackcustomers.Push(customer2);
+            stackcustomers.Push(customer3);
+            stackcustomers.Push(customer4);
+            stackcustomers.Push(customer5);
+
+            // with  Removing the Element Value in peek que method
+            Customer cus1 = stackcustomers.Pop();
+            Console.WriteLine(cus1.ID + "-" + cus1.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            Customer cus2 = stackcustomers.Pop();
+            Console.WriteLine(cus2.ID + "-" + cus2.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            Customer cus3 = stackcustomers.Pop();
+            Console.WriteLine(cus3.ID + "-" + cus3.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            Customer cus4 = stackcustomers.Pop();
+            Console.WriteLine(cus4.ID + "-" + cus4.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            Customer cus5 = stackcustomers.Pop();
+            Console.WriteLine(cus5.ID + "-" + cus5.Name);
+            Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+6) stack  für foreach loop
+-------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Stack<Customer> stackcustomers = new Stack<Customer>();
+            stackcustomers.Push(customer1);
+            stackcustomers.Push(customer2);
+            stackcustomers.Push(customer3);
+            stackcustomers.Push(customer4);
+            stackcustomers.Push(customer5);
+
+            foreach(Customer cus in stackcustomers)
+            {
+                Console.WriteLine(cus.ID + "-" + cus.Name);
+                Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            }
+            // with  Removing the Element Value in peek que method
+            //Customer cus1 = stackcustomers.Pop();
+            //Console.WriteLine(cus1.ID + "-" + cus1.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus2 = stackcustomers.Pop();
+            //Console.WriteLine(cus2.ID + "-" + cus2.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus3 = stackcustomers.Pop();
+            //Console.WriteLine(cus3.ID + "-" + cus3.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus4 = stackcustomers.Pop();
+            //Console.WriteLine(cus4.ID + "-" + cus4.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus5 = stackcustomers.Pop();
+            //Console.WriteLine(cus5.ID + "-" + cus5.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+7)
+---------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Customer customer1 = new Customer()
+            {
+                ID = 101,
+                Name = "Makr",
+                Salary = 4500,
+            };
+            Customer customer2 = new Customer()
+            {
+                ID = 102,
+                Name = "Kumar",
+                Salary = 3000,
+            };
+            Customer customer3 = new Customer()
+            {
+                ID = 103,
+                Name = "Rosi",
+                Salary = 5000,
+            };
+            Customer customer4 = new Customer()
+            {
+                ID = 104,
+                Name = "Ramany",
+                Salary = 4500,
+            };
+            Customer customer5 = new Customer()
+            {
+                ID = 1564,
+                Name = "Suresh",
+                Salary = 7500,
+            };
+
+
+            Stack<Customer> stackcustomers = new Stack<Customer>();
+            stackcustomers.Push(customer1);
+            stackcustomers.Push(customer2);
+            stackcustomers.Push(customer3);
+            stackcustomers.Push(customer4);
+            stackcustomers.Push(customer5);
+
+            Customer cus = stackcustomers.Peek();
+            Console.WriteLine(cus.ID + "-" + cus.Name);
+            Console.WriteLine("Total Iterm in the stackmethod=" + stackcustomers.Count);
+
+
+            //foreach(Customer cus in stackcustomers)
+            //{
+            //    Console.WriteLine(cus.ID + "-" + cus.Name);
+            //    Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //}
+            // with  Removing the Element Value in peek que method
+            //Customer cus1 = stackcustomers.Pop();
+            //Console.WriteLine(cus1.ID + "-" + cus1.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus2 = stackcustomers.Pop();
+            //Console.WriteLine(cus2.ID + "-" + cus2.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus3 = stackcustomers.Pop();
+            //Console.WriteLine(cus3.ID + "-" + cus3.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus4 = stackcustomers.Pop();
+            //Console.WriteLine(cus4.ID + "-" + cus4.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+            //Customer cus5 = stackcustomers.Pop();
+            //Console.WriteLine(cus5.ID + "-" + cus5.Name);
+            //Console.WriteLine("Total Iterm in the Queue=" + stackcustomers.Count);
+
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Salary { get; set; }
+    }
+}
+
+
+
+
+
+
