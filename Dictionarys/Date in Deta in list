@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+
+// wenn wir  Nehmen  count fuction  dann benutzen  system.Linq Namespace
+namespace System.Linq
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+         
+
+            List<Customer> customers = new List<Customer>();
+            customers.Add(new Customer(){ ID = 101,Name = "Makr",Salary = "12/45/2019" });
+            customers.Add(new Customer(){ID = 102,Name = "Kumar", Salary = "87/30/2019 "});
+            customers.Add(new Customer(){ ID = 103,Name = "Rosi",Salary = "35/50/2019" });
+            customers.Add(new Customer(){ ID = 141,Name = "pop", Salary = "02/5/2019 "});
+            customers.Add(new Customer(){ ID = 10,Name = "mah", Salary = "50/0/2019"});
+
+            Dictionary<string, Customer> dict = customers.ToDictionary(cust => cust.Salary, cust => cust);
+            foreach (KeyValuePair<string, Customer> kvp in dict)
+            {
+                Console.WriteLine(" any Detail About the Customer: {0}", kvp.Key);
+                Customer cust = kvp.Value;
+                Console.WriteLine("ID = {0} Name : {1} Salary : {2}", cust.ID, cust.Name, cust.Salary);
+            }
+            Console.WriteLine("Trägen Sie customer ID");
+            string num =  Console.ReadLine().ToLower();
+            Customer customer = dict[num];
+            Console.WriteLine("Customer ID: {0}, Name : {1}, Salary : {2}", customer.ID, customer.Name, customer.Salary);
+        }
+    }
+
+    public class Customer
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Salary { get; set; }
+
+        public override string ToString()
+        {
+            return this.Salary;
+        }
+    }
+    
+    
+}
