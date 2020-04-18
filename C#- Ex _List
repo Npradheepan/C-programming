@@ -1,0 +1,172 @@
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp37
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Students student_1 = new Students()
+            {
+                ID = 101,
+                Name = "John",
+                Age = 20,
+                Stand = "A12"
+            };
+
+            Students student_2 = new Students()
+            {
+                ID = 102,
+                Name = "Dhon",
+                Age = 19,
+                Stand = " B12"
+            };
+
+            Students student_3 = new Students()
+            {
+                ID = 103,
+                Name = "Sun",
+                Age = 18,
+                Stand = "C10",
+            };
+
+            Students student_4 = new Students()
+            {
+                ID = 104,
+                Name = "Muru",
+                Age = 29,
+                Stand = "A10",
+            };
+
+            Students student_5 = new Students()
+            {
+                ID = 105,
+                Name = "Nina",
+                Age = 29,
+                Stand = "A10",
+            };
+            List<Students> ListStudents = new List<Students>();
+                ListStudents.Add(student_1);
+                ListStudents.Add(student_2);
+                ListStudents.Add(student_3);
+                ListStudents.Add(student_4);
+                ListStudents.Add(student_5);
+
+            if (ListStudents.Contains(student_5))
+            {
+                Console.WriteLine("Five Students Exist in this List!");
+              
+            }
+            else { Console.WriteLine("In This List does Not 5 students");
+            }
+            Console.ReadKey();
+        }
+       
+        
+    }
+     public class Students
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Stand { get; set; }
+    }
+}
+-------------------------------------------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+
+namespace ConsoleApp37
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //List <Students> ListOfstudent = new List<Students> ();
+            //ListOfstudent.Add(new Students() { ID = 101, Name = "John",Age = 20,Stand = "A12" });
+            //ListOfstudent.Add(new Students() { ID = 102, Name = "Dhon",Age = 19,Stand = " B12" });
+            //ListOfstudent.Add(new Students() { ID = 103, Name = "Sun", Age = 18, Stand = "C10", });
+            //ListOfstudent.Add(new Students(){ ID = 104,  Name = "Muru",Age = 29, Stand = "A10",  });
+            //ListOfstudent.Add(new Students() { ID = 105, Name = "Nina", Age = 29,Stand = "A10", });
+            //foreach(Students DetailOfstudents in ListOfstudent)
+            //{
+            //    Console.WriteLine("ID{0}, Name{1}, Age{2}, Stand{3}", DetailOfstudents.ID, DetailOfstudents.Name, DetailOfstudents.Age, DetailOfstudents.Stand.ToString());
+            //    Console.ReadKey();
+            //}
+
+
+
+            Students student_1 = new Students()
+            {
+                ID = 101,
+                Name = "John",
+                Age = 20,
+                Stand = "A12"
+            };
+
+            Students student_2 = new Students()
+            {
+                ID = 102,
+                Name = "Dhon",
+                Age = 19,
+                Stand = " B12"
+            };
+
+            Students student_3 = new Students()
+            {
+                ID = 103,
+                Name = "Sun",
+                Age = 18,
+                Stand = "C10",
+            };
+
+            Students student_4 = new Students()
+            {
+                ID = 104,
+                Name = "Muru",
+                Age = 29,
+                Stand = "A10",
+            };
+
+            Students student_5 = new Students()
+            {
+                ID = 105,
+                Name = "Nina",
+                Age = 29,
+                Stand = "A10",
+            };
+            List<Students> ListStudents = new List<Students>();
+            ListStudents.Add(student_1);
+            ListStudents.Add(student_2);
+            ListStudents.Add(student_3);
+            ListStudents.Add(student_4);
+            ListStudents.Add(student_5);
+            if (ListStudents.Contains(student_5))
+                {
+                    Console.WriteLine("Five Students Exist in this List!");
+                }
+                else
+                {
+                    Console.WriteLine("In This List does Not 5 students");
+                }
+
+            foreach (Students Detailsstudents in ListStudents)
+            {
+                Console.WriteLine("ID{0}, Name{1}, Age{2}, Stand{3}", Detailsstudents.ID, Detailsstudents.Name, Detailsstudents.Age, Detailsstudents.Stand.ToString());
+                Console.ReadKey();
+            }
+            
+           
+
+        }
+    }
+
+     public class Students
+    {
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public int Age { get; set; }
+        public string Stand { get; set; }
+     }
+}
